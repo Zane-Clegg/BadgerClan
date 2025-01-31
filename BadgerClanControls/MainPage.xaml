@@ -6,11 +6,28 @@
     <ScrollView>
         <Grid>
             <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" /> 
+                Grid.Row="0"
+                Grid.Column="0"
+                x:Name="SacrificeButton"
+                Text="Sac a knight" 
+                Command="{Binding SetStrategyCommand}"
+                CommandParameter="Sacrifice" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                x:Name="RunAwayButton"
+                Text="Run Away" 
+                Command="{Binding SetStrategyCommand}"
+                CommandParameter="RunAway" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                x:Name="RunGunButton"
+                Text="Run And Gun" 
+                Command="{Binding SetStrategyCommand}"
+                CommandParameter="RunAndGun" />
+            <Label Text="{Binding current}"
+                />
         </Grid>
     </ScrollView>
 

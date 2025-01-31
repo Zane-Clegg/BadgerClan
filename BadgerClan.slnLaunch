@@ -9,6 +9,29 @@
       {
         "Path": "BadgerClan.Client\\BadgerClan.Client.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "BadgerClanControls\\BadgerClanControls.csproj",
+        "Action": "Start",
+        "DebugTarget": "Windows Machine"
+      },
+      {
+        "Path": "BadgerClanApi\\BadgerClanApi.csproj",
+        "Action": "Start"
+      }
+    ]
+  },
+  {
+    "Name": "Maui",
+    "Projects": [
+      {
+        "Path": "BadgerClanControls\\BadgerClanControls.csproj",
+        "Action": "Start",
+        "DebugTarget": "Windows Machine"
+      },
+      {
+        "Path": "BadgerClanApi\\BadgerClanApi.csproj",
+        "Action": "Start"
       }
     ]
   }

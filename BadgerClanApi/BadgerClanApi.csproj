@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BadgerClan.Client\BadgerClan.Client.csproj" />
+    <ProjectReference Include="..\BadgerClan.Logic\BadgerClan.Logic.csproj" />
+  </ItemGroup>
+
 </Project>
