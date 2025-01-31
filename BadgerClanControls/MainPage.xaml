@@ -4,7 +4,8 @@
              x:Class="BadgerClanControls.MainPage">
 
     <ScrollView>
-        <Grid>
+        <Grid ColumnDefinitions="*,*"
+              RowDefinitions="*,*">
             <Button
                 Grid.Row="0"
                 Grid.Column="0"
