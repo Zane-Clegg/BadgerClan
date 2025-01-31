@@ -1,0 +1,6 @@
+@BadgerClanApi_HostAddress = http://localhost:5160
+
+GET {{BadgerClanApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
