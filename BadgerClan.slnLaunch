@@ -17,7 +17,8 @@
       },
       {
         "Path": "BadgerClanApi\\BadgerClanApi.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "http"
       }
     ]
   },
@@ -31,6 +32,14 @@
       },
       {
         "Path": "BadgerClanApi\\BadgerClanApi.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "BadgerClan.Client\\BadgerClan.Client.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "BadgerClan.Web\\BadgerClan.Web.csproj",
         "Action": "Start"
       }
     ]
