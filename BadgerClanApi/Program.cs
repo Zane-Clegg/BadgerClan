@@ -18,6 +18,7 @@ builder.Services.AddSingleton<IPath, Sacrifice>();
 
 var app = builder.Build();
 
+string _pathing = "Nothing";
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -31,8 +32,14 @@ app.UseAuthorization();
 app.MapControllers();
 
 var client = new HttpClient();
+
+app.MapGet("/", () => "Api running");
+
+app.MapGet("/path", () => _pathing);
+
 app.MapGet("/set/{pathing}", ([FromServices] PathService pathService, string pathing) =>
 {
+    _pathing = pathing;
     app.Logger.LogInformation($"{pathing} request made");
     pathService.SetPathing(pathing);
     return Results.Ok($"Set to {pathing}.");

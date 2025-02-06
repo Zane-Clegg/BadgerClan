@@ -10,9 +10,10 @@ namespace BadgerClanControls.ViewModels
 
         [ObservableProperty]
         private string current;
+
         public MainViewModel(IApiService api)
         {
-            api = apiService;
+            apiService = api ?? throw new ArgumentNullException(nameof(api));
             current = "Nothing";
         }
 

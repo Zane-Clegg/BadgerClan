@@ -6,7 +6,7 @@ namespace BadgerClanApi
     public class PathService 
     {
         private readonly Dictionary<string, IPath> _paths;
-        private IPath _currentPath;
+        IPath _currentPath;
 
         public PathService(IEnumerable<IPath> paths)
         {
@@ -22,7 +22,7 @@ namespace BadgerClanApi
 
         public void SetPathing(string requestedStrategy)
         {
-            if (_paths.TryGetValue(requestedStrategy.ToLower(), out var strategy))
+            if (_paths.TryGetValue(requestedStrategy.ToString(), out var strategy))
             {
                 _currentPath = strategy;
             }

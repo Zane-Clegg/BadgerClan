@@ -16,7 +16,7 @@ namespace BadgerClanControls.Services
         }
         public async Task SetApiAsync(string pathing)
         {
-            var url = $"/set/{pathing}";
+            var url = $"https://localhost:7222/set/{pathing}";
             var response = await _httpClient.GetAsync(url);
         }
     }
