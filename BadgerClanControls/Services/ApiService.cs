@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BadgerClanControls.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,31 @@ namespace BadgerClanControls.Services
         {
             _httpClient = clientFactory.CreateClient("GameControllerApi");
         }
-        public async Task SetApiAsync(string pathing)
+        public async Task<ResultPattern<bool,string>> SetApiAsync(string apiUrl, string pathing)
         {
-            var url = $"https://localhost:7222/set/{pathing}";
-            var response = await _httpClient.GetAsync(url);
+            var url = $"{apiUrl}/{pathing}";
+            if (apiUrl == null)
+            {
+                return ResultPattern<bool, string>.Fail("Null url");
+            }
+            try
+            {
+                var response = await _httpClient.GetAsync(url);
+
+                // branchless option
+                //return ResultPattern<bool, string>.Ok(response.IsSuccessStatusCode)
+                //    ?? ResultPattern<bool, string>.Fail($"Api request failed with error: {response.StatusCode}");
+
+                if (response.IsSuccessStatusCode) 
+                {
+                    return ResultPattern<bool, string>.Ok(true);
+                }
+                return ResultPattern<bool, string>.Fail($"Api request failed with error: {response.StatusCode}");
+            }
+            catch (Exception ex) 
+            {
+                return ResultPattern<bool,string>.Fail($"{ex.Message}\nCheck your input and try again");
+            }
         }
     }
 }

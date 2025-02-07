@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BadgerClanControls.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace BadgerClanControls.Services
 {
     public interface IApiService
     {
-        public Task SetApiAsync(string strategyChoice);
+        public Task<ResultPattern<bool, string>> SetApiAsync(string apiUrl, string path);
     }
 }
