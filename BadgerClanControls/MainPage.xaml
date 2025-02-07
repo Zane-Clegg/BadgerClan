@@ -80,6 +80,21 @@
                 </Button.Triggers>
             </Button>
         </VerticalStackLayout>
+        <VerticalStackLayout>
+            <CollectionView
+                ItemsSource="{Binding ApiSelections}"
+                >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout 
+                            VerticalOptions="Center">
+                            <CheckBox
+                                IsChecked="{Binding IsSelected}"/>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
     </VerticalStackLayout>
 
 </ContentPage>

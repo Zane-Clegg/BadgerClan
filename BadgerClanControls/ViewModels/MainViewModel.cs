@@ -10,7 +10,7 @@ namespace BadgerClanControls.ViewModels
     {
         private readonly IApiService apiService;
 
-        public ObservableCollection<ApiSelectionModel> ApiSelections { get; set; } = new ObservableCollection<ApiSelectionModel>();
+        private ObservableCollection<ApiModel> ApiSelections { get; set; } = new ObservableCollection<ApiModel>();
 
         [ObservableProperty]
         private string current = "nothing";
@@ -49,6 +49,9 @@ namespace BadgerClanControls.ViewModels
                 {
                     ErrorMessage = message.Error;
                 }
+                ApiSelections.Add(new ApiModel(ApiName, ApiUrl));
+                ApiUrl = string.Empty;
+                ApiName = string.Empty;
             }
             catch (Exception ex) 
             {
