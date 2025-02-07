@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BadgerClanControls.MainPage">
 
-        <VerticalStackLayout>
+    <VerticalStackLayout>
         <VerticalStackLayout>
             <Label 
                 Grid.Row="0"
@@ -29,10 +29,10 @@
                     />
             <Button Text="Submit" Command="{Binding SubmitApiCommand}">
                 <Button.Triggers>
-                <Trigger TargetType="Button" Property="IsPressed" Value="True">
-                    <Setter Property="TextColor" Value="White"/>
-                    <Setter Property="Scale" Value="0.95"/>
-                </Trigger>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                        <Setter Property="TextColor" Value="White"/>
+                        <Setter Property="Scale" Value="0.95"/>
+                    </Trigger>
                 </Button.Triggers>
             </Button>
         </VerticalStackLayout>
@@ -90,11 +90,14 @@
                             VerticalOptions="Center">
                             <CheckBox
                                 IsChecked="{Binding IsSelected}"/>
+                            <Label
+                                Text="{Binding ApiName}"/>
+                            <Label
+                                Text="{Binding ApiUrl}"/>
                         </HorizontalStackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </VerticalStackLayout>
     </VerticalStackLayout>
-
 </ContentPage>

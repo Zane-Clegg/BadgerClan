@@ -9,14 +9,16 @@ namespace BadgerClanControls.ViewModels
 {
     public partial class ApiViewModel : ObservableObject
     {
-        public string ApiUrl { get; set; }
-        public string ApiName { get; set; }
-        [ObservableObject]
-        public bool isSelected { get; set; }
-        public ApiViewModel(string apiName, string apiUrl)
+        [ObservableProperty]
+        private string apiUrl;
+        [ObservableProperty]
+        private string apiName;
+        [ObservableProperty]
+        private bool isSelected;
+        public ApiViewModel(string _apiName, string _apiUrl)
         {
-            ApiUrl = apiUrl;
-            ApiName = apiName;
+            apiUrl = _apiUrl;
+            apiName = _apiName;
             isSelected = false;
         }
     }

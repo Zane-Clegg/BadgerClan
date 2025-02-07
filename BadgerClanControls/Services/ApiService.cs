@@ -17,11 +17,12 @@ namespace BadgerClanControls.Services
         }
         public async Task<ResultPattern<bool,string>> SetApiAsync(string apiUrl, string pathing)
         {
-            var url = $"{apiUrl}/{pathing}";
+            
             if (apiUrl == null)
             {
                 return ResultPattern<bool, string>.Fail("Null url");
             }
+            var url = $"{apiUrl.TrimEnd('/')}/{pathing}";
             try
             {
                 var response = await _httpClient.GetAsync(url);
