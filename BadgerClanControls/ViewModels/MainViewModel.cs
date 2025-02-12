@@ -44,7 +44,7 @@ namespace BadgerClanControls.ViewModels
             string pathing = "";
             try
             {
-                var message = await apiService.SetApiAsync(ApiUrl.TrimEnd('/'), pathing);
+                var message = await apiService.SetApiAsync(ApiUrl, pathing);
                 if (message.Error != null) 
                 {
                     ErrorMessage = message.Error;

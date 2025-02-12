@@ -15,10 +15,10 @@ namespace BadgerClanControls.ViewModels
         private string apiName;
         [ObservableProperty]
         private bool isSelected;
-        public ApiViewModel(string apiName, string apiUrl)
+        public ApiViewModel(string _apiName, string _apiUrl)
         {
-            ApiUrl = apiUrl;
-            ApiName = apiName;
+            apiUrl = _apiUrl;
+            apiName = _apiName;
             isSelected = false;
         }
     }

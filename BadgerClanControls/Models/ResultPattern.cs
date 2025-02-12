@@ -8,9 +8,9 @@ namespace BadgerClanControls.Models
 {
     public class ResultPattern<T,E>
     {
-        public T? Value { get; set; }
-        public E? Error { get; set; }
-        public bool IsSuccess { get; set; }
+        public T? Value { get; }
+        public E? Error { get; }
+        public bool IsSuccess { get; }
 
         private ResultPattern(T? value) 
         {
