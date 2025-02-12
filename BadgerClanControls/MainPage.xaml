@@ -90,6 +90,9 @@
                             VerticalOptions="Center">
                             <CheckBox
                                 IsChecked="{Binding IsSelected}"/>
+                            <Label 
+                                Text="{Binding ApiName}"
+                                VerticalOptions="Center"/>
                         </HorizontalStackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

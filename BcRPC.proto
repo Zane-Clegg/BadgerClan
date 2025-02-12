@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option csharp_namespace = "BcProto.gRPC";
+
+//probably don't need this part
+//import "google/protobuf/timestamp.proto"; 
+
+service BadgerClanServiceProto {
+	rpc AddMoves(Moves) returns (StatusMessage);
+}
+
+message StatusMessage {
+	STATUS success = 1;
+	string message = 2;
+}
+
+enum STATUS {
+	failure = 0;
+	success = 1;
+}
+
+message Moves {
+	repeated Move move_list = 1;
+	STATUS success = 2;
+}
+
+message Move {
+	MOVE_TYPE movement = 1;
+	int32 unitId = 2;
+	Coordinate coords = 3;
+}
+
+enum MOVE_TYPE {
+	walk = 0;
+	attack = 1;
+	med_pack = 2;
+}
+
+message Coordinate {
+	int32 x = 1;
+	int32 y = 2;
+}

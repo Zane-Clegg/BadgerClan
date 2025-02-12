@@ -14,12 +14,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{570C8EB2-8E72-4027-AD05-ED28B0E280F1}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		BcRPC.proto = BcRPC.proto
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgerClanControls", "BadgerClanControls\BadgerClanControls.csproj", "{57E37C59-2593-400D-B084-C95B8E7E5178}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgerClanApi", "BadgerClanApi\BadgerClanApi.csproj", "{070B85B3-7469-49F2-BA82-971CFB817EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgerClan.gRPC", "BadgerClan.gRPC\BadgerClan.gRPC.csproj", "{2AC3F3BE-6135-4A80-837A-1272B92088A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +54,10 @@ Global
 		{070B85B3-7469-49F2-BA82-971CFB817EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{070B85B3-7469-49F2-BA82-971CFB817EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{070B85B3-7469-49F2-BA82-971CFB817EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AC3F3BE-6135-4A80-837A-1272B92088A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AC3F3BE-6135-4A80-837A-1272B92088A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AC3F3BE-6135-4A80-837A-1272B92088A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AC3F3BE-6135-4A80-837A-1272B92088A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
